@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Descripcion</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Nombre</th>
+        </tr>
+        <tr th:each="tarea : ${lista}">
+            <td th:text="${tarea.getNombre}">Hacer la compra</td>
+
+        </tr>
+    </table>
+
+</body>
+</html>

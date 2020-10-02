@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Tareas</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Fecha Creación</th>
+            <th>Fecha Caducidad</th>
+            <th>Editar</th>
+        </tr>
+        <tr th:each="tarea : ${lista}">
+            <td th:text="${tarea.id}">1</td>
+            <td th:text="${tarea.nombre}">Hacer la compra</td>
+            <td th:text="${tarea.fechaCreacion}">1</td>
+            <td th:text="${tarea.fechaCaducidad}">1</td>
+            <td th:href="@{/editarTarea/{id}(id=${tareas.id)}">Editar</td>
+        </tr>
+    </table>
+
+</body>
+</html>
